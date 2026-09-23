@@ -557,9 +557,874 @@ Student ID not found.
 
 ***
 
-## 👩‍💻 Author
+##  Author
 
 **Dhruvi Das**
 
 This project was created as part of my Python programming learning and practice.
+
+***
+
+#  Functional Treat – Data Analyzer and Transformer
+
+The **Functional Treat – Data Analyzer and Transformer** is a Python-based, menu-driven console application designed to analyze and transform numerical data using 1D and 2D lists.
+
+This project demonstrates important Python programming concepts including **built-in functions, user-defined functions, recursion, lambda functions, `map()`, `filter()`, `*args`, `**kwargs`, `__doc__`, global variables, multiple return values, list sorting, and 2D lists.**
+
+The program provides a menu-driven interface where the user can enter data, calculate statistics, find duplicate and unique values, filter and transform data, sort lists, calculate factorials, demonstrate function arguments, display function documentation, and work with 2D lists.
+
+***
+
+##  Project Video Demonstration
+
+Watch my complete Data Analyzer and Transformer project explanation and live demonstration here:
+
+Project 4 video(https://drive.google.com/file/d/13jBunhts7HmDpawKKjjVW6Y7adMP53Jz/view?usp=sharing)
+
+***
+
+##  Objectives
+
+- Create a menu-driven Python application.
+- Work with 1D and 2D lists.
+- Take numerical data from the user.
+- Demonstrate Python built-in functions.
+- Create and use user-defined functions.
+- Calculate basic statistics.
+- Find duplicate and unique values.
+- Demonstrate recursion using factorial calculation.
+- Use lambda functions with `filter()`.
+- Use lambda functions with `map()`.
+- Sort 1D data using `sort()`.
+- Sort a 2D list using `sorted()`.
+- Demonstrate `*args`.
+- Demonstrate `**kwargs`.
+- Demonstrate function documentation using `__doc__`.
+- Demonstrate the `global` keyword.
+- Return multiple values from a function.
+- Display a 2D list as a grid.
+
+***
+
+## Features
+
+###  1. Input 1D Data
+
+The program allows the user to enter 1D numerical data manually or use predefined sample data.
+
+The user can choose:
+
+```text
+1. Enter data manually
+2. Use sample data
+```
+
+Manual values are entered separated by spaces.
+
+Example:
+
+```text
+10 20 30 40 50
+```
+
+The entered values are converted into integers and stored in a list.
+
+***
+
+###  2. Display Data Summary
+
+The program calculates basic statistics using Python built-in functions.
+
+It displays:
+
+- Total number of values
+- Minimum value
+- Maximum value
+- Sum
+- Average
+
+The built-in functions used include:
+
+```python
+len()
+min()
+max()
+sum()
+```
+
+***
+
+###  3. Calculate Average
+
+The program uses a user-defined function called `calculate_average()`.
+
+Example:
+
+```python
+def calculate_average(numbers):
+    return sum(numbers) / len(numbers)
+```
+
+The function calculates and returns the average of the dataset.
+
+***
+
+###  4. Find Duplicate Values
+
+The program searches the dataset for values that occur more than once.
+
+It uses the `count()` method to identify duplicate values.
+
+Duplicate values are stored in a separate list and displayed to the user.
+
+***
+
+###  5. Display Unique Values
+
+The program identifies values that have not already been added to the unique-values list.
+
+A separate list is used to ensure that each value is displayed only once.
+
+***
+
+###  6. Calculate Factorial
+
+The project demonstrates **recursion** through factorial calculation.
+
+The factorial function calls itself until it reaches a base condition.
+
+Example:
+
+```python
+def factorial(number):
+    if number == 0 or number == 1:
+        return 1
+    return number * factorial(number - 1)
+```
+
+For example:
+
+```text
+5! = 120
+```
+
+The program also checks whether the entered number is negative.
+
+***
+
+###  7. Filter Data Using Lambda
+
+The project demonstrates a lambda function together with `filter()`.
+
+The user enters a threshold value.
+
+The program displays values greater than or equal to that threshold.
+
+Example:
+
+```python
+result = list(filter(lambda x: x >= limit, data))
+```
+
+***
+
+###  8. Transform Data Using `map()`
+
+The project uses `map()` with a lambda function to transform the dataset.
+
+Each value is multiplied by 2.
+
+Example:
+
+```python
+result = list(map(lambda x: x * 2, data))
+```
+
+The program displays both the original data and transformed data.
+
+***
+
+###  9. Sort 1D Data
+
+The program allows the user to sort the 1D list.
+
+The available choices are:
+
+```text
+1. Ascending
+2. Descending
+```
+
+The project uses the list `sort()` method.
+
+Example:
+
+```python
+data.sort()
+```
+
+For descending order:
+
+```python
+data.sort(reverse=True)
+```
+
+The `sort()` method changes the original list.
+
+***
+
+###  10. Display Dataset Statistics
+
+The program uses a function called `multiply_values()` to calculate multiple statistics.
+
+It returns:
+
+- Minimum
+- Maximum
+- Total
+- Average
+
+Example:
+
+```python
+minimum, maximum, total, average = multiply_values(data)
+```
+
+This demonstrates returning multiple values from a function.
+
+***
+
+###  11. Demonstrate `*args`
+
+The project demonstrates the use of `*args` to accept multiple positional values.
+
+Example:
+
+```python
+def show_args(*args):
+```
+
+The values are displayed using a loop.
+
+***
+
+###  12. Demonstrate `**kwargs`
+
+The project demonstrates keyword arguments using `**kwargs`.
+
+Example:
+
+```python
+def show_kwargs(**kwargs):
+```
+
+The function receives key-value pairs and displays them.
+
+The demonstration includes:
+
+- Total values
+- Minimum
+- Maximum
+- Average
+
+***
+
+###  13. Display Function Documentation
+
+The project demonstrates the `__doc__` attribute.
+
+Functions contain documentation strings called docstrings.
+
+The program displays selected function documentation using:
+
+```python
+function_name.__doc__
+```
+
+This demonstrates how Python can access documentation written inside functions.
+
+***
+
+###  14. Global Summary
+
+The project demonstrates the `global` keyword.
+
+Two global variables are created:
+
+```python
+summary_count = 0
+summary_average = 0
+```
+
+The `global_summary()` function updates these variables with:
+
+- Total number of values
+- Overall average
+
+***
+
+###  15. Enter 2D List
+
+The program allows the user to create a 2D list by entering:
+
+- Number of rows
+- Number of columns
+- Values for each position
+
+The program displays the 2D list and also displays it as a formatted grid.
+
+Example:
+
+```text
+10    20    30
+40    50    60
+70    80    90
+```
+
+***
+
+###  16. Sort 2D List Using `sorted()`
+
+The program contains a sample 2D list:
+
+```python
+matrix = [
+    [30, 20],
+    [50, 70],
+    [80, 10]
+]
+```
+
+The program uses:
+
+```python
+new_matrix = sorted(matrix)
+```
+
+to create a new sorted version of the 2D list.
+
+This demonstrates the difference between `sort()` and `sorted()`.
+
+The `sort()` method changes the original list, while `sorted()` returns a new sorted list.
+
+***
+
+###  17. Exit Program
+
+The user can select option `17` to exit the application.
+
+The program displays a thank-you message before terminating.
+
+***
+
+##  Python Concepts Used
+
+###  Built-in Functions
+
+The project uses several Python built-in functions:
+
+```python
+len()
+sum()
+min()
+max()
+```
+
+These functions are used to calculate basic dataset statistics.
+
+***
+
+###  User-Defined Functions
+
+The project is divided into multiple user-defined functions.
+
+Examples include:
+
+```python
+input_data()
+display_summary()
+calculate_average()
+find_duplicates()
+find_unique()
+factorial()
+filter_data()
+transform_data()
+sort_data()
+```
+
+Functions make the program organized and easier to understand.
+
+***
+
+###  Recursion
+
+Recursion is demonstrated through the `factorial()` function.
+
+The function calls itself with a smaller number until it reaches the base condition.
+
+***
+
+###  Lambda Functions
+
+Lambda functions are used for short operations.
+
+Examples include:
+
+```python
+lambda x: x >= limit
+```
+
+and:
+
+```python
+lambda x: x * 2
+```
+
+***
+
+###  `filter()`
+
+The `filter()` function is used with a lambda function to select values based on a condition.
+
+```python
+filter(lambda x: x >= limit, data)
+```
+
+***
+
+###  `map()`
+
+The `map()` function is used with a lambda function to transform every value in the dataset.
+
+```python
+map(lambda x: x * 2, data)
+```
+
+***
+
+###  `sort()` and `sorted()`
+
+The project demonstrates both sorting approaches.
+
+`sort()` modifies the original list:
+
+```python
+data.sort()
+```
+
+`sorted()` returns a new sorted list:
+
+```python
+new_matrix = sorted(matrix)
+```
+
+***
+
+###  `*args`
+
+`*args` allows a function to accept multiple positional arguments.
+
+Example:
+
+```python
+def show_args(*args):
+```
+
+***
+
+###  `**kwargs`
+
+`**kwargs` allows a function to accept multiple keyword arguments.
+
+Example:
+
+```python
+def show_kwargs(**kwargs):
+```
+
+***
+
+###  `__doc__`
+
+The `__doc__` attribute is used to access a function's documentation string.
+
+Example:
+
+```python
+input_data.__doc__
+```
+
+***
+
+###  `global` Keyword
+
+The `global` keyword allows a function to modify variables defined outside the function.
+
+The project uses it for:
+
+```python
+summary_count
+summary_average
+```
+
+***
+
+###  Multiple Return Values
+
+The function `multiply_values()` returns multiple values:
+
+```python
+return minimum, maximum, total, average
+```
+
+These values are then assigned to separate variables.
+
+***
+
+##  Loops and Conditional Statements
+
+The project uses loops and conditional statements throughout the program.
+
+### `while` Loop
+
+The main menu runs continuously using:
+
+```python
+while True:
+```
+
+The loop stops when the user selects the Exit option.
+
+### `for` Loop
+
+`for` loops are used for:
+
+- Finding duplicate values.
+- Finding unique values.
+- Displaying `*args`.
+- Processing 2D lists.
+- Displaying grid values.
+
+### Conditional Statements
+
+The project uses:
+
+- `if`
+- `elif`
+- `else`
+
+to process menu choices and control different program operations.
+
+***
+
+##  Functions Used
+
+The main functions in the project are:
+
+### `input_data()`
+
+Takes 1D data manually or loads sample data.
+
+### `display_summary()`
+
+Displays basic dataset statistics.
+
+### `calculate_average()`
+
+Calculates the average of the dataset.
+
+### `find_duplicates()`
+
+Finds duplicate values.
+
+### `find_unique()`
+
+Displays unique values.
+
+### `factorial()`
+
+Calculates factorial using recursion.
+
+### `factorial_program()`
+
+Takes a number from the user and displays its factorial.
+
+### `filter_data()`
+
+Filters data using a lambda function and `filter()`.
+
+### `transform_data()`
+
+Transforms data using a lambda function and `map()`.
+
+### `sort_data()`
+
+Sorts the 1D list in ascending or descending order.
+
+### `multiply_values()`
+
+Returns minimum, maximum, total, and average.
+
+### `display_statistics()`
+
+Displays the multiple returned statistics.
+
+### `show_args()`
+
+Demonstrates `*args`.
+
+### `args_program()`
+
+Runs the `*args` demonstration.
+
+### `show_kwargs()`
+
+Demonstrates `**kwargs`.
+
+### `kwargs_program()`
+
+Runs the `**kwargs` demonstration.
+
+### `documentation()`
+
+Displays selected function documentation.
+
+### `global_summary()`
+
+Stores and displays dataset summary using global variables.
+
+### `input_2d_list()`
+
+Creates and displays a user-defined 2D list as a grid.
+
+### `sample_2d_list()`
+
+Displays a sample 2D list and demonstrates `sorted()`.
+
+***
+
+##  Menu-Driven Interface
+
+The program provides the following menu:
+
+```text
+1. Input 1D Data
+2. Display Data Summary
+3. Calculate Average
+4. Find the Duplicate Values
+5. Display Unique Values
+6. Calculate Factorial
+7. Filter Data using Lambda
+8. Transform data using map
+9. Sort 1D Data
+10. Display Dataset Statistics
+11. Demonstrate *args
+12. Demonstrate **kwargs
+13. Display Function Documentation
+14. Use of Global Summary
+15. Enter 2D List
+16. Sort 2D List using sorted()
+17. Exit
+```
+
+The user selects an option by entering the corresponding number.
+
+The `while` loop keeps displaying the menu until option `17` is selected.
+
+***
+
+## 💻 How to Run the Program
+
+1. Open Python or IDLE.
+2. Open the Python file:
+
+```text
+Functional_Treat.py
+```
+
+3. Run the program.
+4. The main menu will appear.
+5. Enter the number of the required option.
+6. Follow the instructions displayed by the program.
+7. Select option `17` to exit.
+
+***
+
+## 📂 Program Structure
+
+```text
+Functional_Treat/
+│
+├── Functional_Treat.py
+└── README.md
+```
+
+The `Functional_Treat.py` file contains the complete Python program.
+
+The `README.md` file contains the project description, objectives, features, concepts, instructions, and other project information.
+
+***
+
+## 🧪 Sample Workflow
+
+A typical demonstration of the program can include:
+
+### Step 1 – Input 1D Data
+
+Select:
+
+```text
+1. Input 1D Data
+```
+
+The user can enter data manually or select the sample data.
+
+### Step 2 – Display Data Summary
+
+Select:
+
+```text
+2. Display Data Summary
+```
+
+The program displays the count, minimum, maximum, sum, and average.
+
+### Step 3 – Calculate Average
+
+Select:
+
+```text
+3. Calculate Average
+```
+
+The program calculates the average using a user-defined function.
+
+### Step 4 – Find Duplicate and Unique Values
+
+Select options:
+
+```text
+4. Find the Duplicate Values
+5. Display Unique Values
+```
+
+The program analyzes the dataset.
+
+### Step 5 – Calculate Factorial
+
+Select:
+
+```text
+6. Calculate Factorial
+```
+
+Enter a number and the program calculates its factorial using recursion.
+
+### Step 6 – Filter and Transform Data
+
+Select:
+
+```text
+7. Filter Data using Lambda
+8. Transform data using map
+```
+
+The program filters values according to a threshold and transforms the dataset by multiplying values by 2.
+
+### Step 7 – Sort Data
+
+Select:
+
+```text
+9. Sort 1D Data
+```
+
+Choose ascending or descending order.
+
+### Step 8 – Demonstrate Functions
+
+The user can demonstrate:
+
+```text
+11. *args
+12. **kwargs
+13. Function Documentation
+14. Global Summary
+```
+
+### Step 9 – Work With 2D Lists
+
+Select:
+
+```text
+15. Enter 2D List
+16. Sort 2D List using sorted()
+```
+
+The program demonstrates creating a 2D list, displaying it as a grid, and sorting a sample 2D list.
+
+### Step 10 – Exit
+
+Select:
+
+```text
+17. Exit
+```
+
+The program displays the thank-you message and terminates.
+
+***
+
+##  Input Handling and Conditions
+
+The program includes basic checks for different situations.
+
+These include:
+
+- Checking whether data is available before performing calculations.
+- Checking whether the user selects a valid menu option.
+- Checking for negative numbers before calculating factorial.
+- Converting numerical input into integers using `int()`.
+- Checking whether a dataset contains values before filtering, transforming, or sorting.
+
+When no data is available, the program displays:
+
+```text
+No data available.
+```
+
+For an invalid menu choice, the program displays:
+
+```text
+Invalid choice.
+```
+
+For a negative factorial input, the program displays:
+
+```text
+Factorial is not possible for negative numbers.
+```
+
+***
+
+##  Assumptions
+
+- 1D data is entered as integers separated by spaces.
+- The factorial operation is performed only for non-negative numbers.
+- 2D list values are entered as integers.
+- The number of values entered for a 2D list depends on the number of rows and columns specified.
+- The program stores data only during the current program session.
+- No external database is used.
+- No external Python libraries are required.
+
+***
+
+##  Author
+
+**Dhruvi Das**
+
+This project was created as part of my Python programming learning and practice.
+
+
+
 
